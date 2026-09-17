@@ -50,5 +50,7 @@ public void eliminarProducto(Long id) {
                             productoExistente.setPrecio(producto.getPrecio());
                             productoExistente.setCantidad(producto.getCantidad());
                             return repository.save(productoExistente); } 
-    
+    public List<Producto> buscarPorNombre(String nombre) {
+    return repository.findByNombreContainingIgnoreCase(nombre);
+}
 }
