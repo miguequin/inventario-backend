@@ -16,6 +16,7 @@ public class Producto {
     
     private String codigo;
     private String nombre;
+    private String marca;
     private String categoria;
     private Double precio;
     private Integer cantidad;
@@ -25,9 +26,10 @@ public class Producto {
     }
 
     // 2. Constructor con parámetros (útil para crear instancias)
-    public Producto(String codigo, String nombre, String categoria, Double precio, Integer cantidad) {
+    public Producto(String codigo, String nombre, String marca, String categoria, Double precio, Integer cantidad) {
         this.codigo = codigo;
         this.nombre = nombre;
+        this.marca = marca;
         this.categoria = categoria;
         this.precio = precio;
         this.cantidad = cantidad;
@@ -56,6 +58,14 @@ public class Producto {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public String getCategoria() {
